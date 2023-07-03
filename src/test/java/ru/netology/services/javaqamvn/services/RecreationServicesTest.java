@@ -8,8 +8,12 @@ public class RecreationServicesTest {
     public void test() {
         RecreationServices services = new RecreationServices();
 
+        int income = 10000;
+        int expense = 3000;
+        int threshold = 20000;
+
+        int actual = services.calculate(income, expense, threshold);
         int expected = 3;
-        int actual = services.calculate(100000, 60000, 150000);
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(actual, expected);
     }
 }
